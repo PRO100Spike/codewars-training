@@ -15,7 +15,6 @@ function solution(roman) {
     if (roman.length === 0) {
         return 0;
     } else {
-        console.log(roman.length, roman[0], dict.get(roman[0]));
         let curent = roman[0];
         let next = roman.length ? roman[1] : "";
         let nearbyDiff = dict.get(next) - dict.get(curent);
@@ -26,3 +25,5 @@ function solution(roman) {
         }
     }
 }
+
+solution("MDCLXVI");

@@ -1,24 +1,10 @@
-import "./styles.css";
-
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-    We use the same configuration as Parcel to bundle this sandbox, you can find more
-    info about Parcel
-    <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
-
-function solution(roman) {
-// complete the solution by transforming the
-// string roman numeral into an integer
-let res = 0;
-let arr = roman.split("");
-//const reversed = arr.reverse();
-let curent = arr.shift();
-let next = arr.length ? arr.shift() : null;
-console.log(curent, next, arr.length);
-return arr.length ? solution(arr.join("")) : res;
-}
-
-solution("MDCLXVI");
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Roman Numerals Decoder</title>
+    <script type="module" src="./index.js"></script>
+</head>
+<body>
+</body>
+</html> 
