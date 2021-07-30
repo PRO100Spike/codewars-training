@@ -1,6 +1,6 @@
 function expandedForm(num) {
   // Your code here
-  let str = num % 10;
+  let str = num % 10 > 0 ? num % 10 : '';
   let level = 0;
 
   const rec = (p) => {
