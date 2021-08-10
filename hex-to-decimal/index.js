@@ -18,3 +18,8 @@ function hexToDec(hexString) {
               : (v.charCodeAt() - 55) * Math.pow(16, hexString.length - i - 1));
     }, 0);
 }
+
+// or Best Practices
+function hexToDec(hexString) {
+  return  parseInt(hexString, 16);
+}
