@@ -11,6 +11,11 @@ function encode(text) {
 }
 
 function decode(bits) {
-  console.log(bits.match(/.{1,3}/g))
+  let text = [];
+  text = bits.match(/.{1,3}/g).map(bit => {
+    return bit[0] === bit[1] ? bit[0] : bit[0] === bit[2] ? bit[0] : bit[2]
+  }).join('').match(/.{1,8}/g).map(bit => {
+    return String.fromCharCode(parseInt(bit, 2).toString(10));
+  }).join('')
   return text;
 }
