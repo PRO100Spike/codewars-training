@@ -1,5 +1,4 @@
-/* https://www.codewars.com/kata/582b59f45ad9526ae6000249/train/javascript
-Might be useful :*/
+/* Might be useful :*/
 function Node(number) {
   this.value = number;
   this.allChild = null;

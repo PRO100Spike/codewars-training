@@ -1,8 +1,6 @@
-//https://www.codewars.com/kata/564057bc348c7200bd0000ff/train/typescript
 export function thirt(n: number): number {
   // your code
   let thirtN: number = 0;
-  let curentN: number = n;
   let nMod10: number = 0;
   let arrN: number[] = [];
   let mod10 = 10;
