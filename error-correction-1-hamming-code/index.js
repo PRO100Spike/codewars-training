@@ -1,5 +1,3 @@
-// https://www.codewars.com/kata/5ef9ca8b76be6d001d5e1c3e/train/javascript
-
 function encode(text) {
   let bits = [];
   for (let i = 0; i < text.length; i++ ) {
