@@ -20,6 +20,14 @@ function Node(number) {
   this.getAllChild = function () {
     let count = 0;
     let curentNode = this;
+    console.log(this, typeof curentNode, curentNode.toString());
+    while(typeof curentNode === 'object') {
+      count++;
+      console.log(typeof curentNode === 'object', curentNode);
+      debugger
+      curentNode = curentNode.nextNode;
+    }
+    return count;
   };
 }
 
@@ -70,7 +78,7 @@ function phoneNumber(phoneNumbers) {
       }
     }
   });
-  console.log(phoneBook);
+  console.log(phoneBook, phoneBook.get("0").getAllChild());
 }
 
 phoneNumber([
