@@ -5,3 +5,5 @@ function bouncingBall(h,  bounce,  window) {
     }
     return h < window ? -1 : 2 + bouncingBall((h * bounce), bounce, window);
 }
+
+console.log(11);

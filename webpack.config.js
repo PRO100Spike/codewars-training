@@ -1,24 +1,52 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+const __dirname = path.resolve();
+
+export default {
   mode: 'development',
-  entry: {
-    index: './src/index.js',
-    '6-kyu': './6 kyu/index.js',
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    static: './dist',
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Development',
-    }),
-  ],
   output: {
+    publicPath: '/',
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+  },
+  entry: {
+    index: './index.js'
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: path.resolve(__dirname, './dist'),
+    open: true,
+    compress: true,
+    hot: false,
+    port: 8080,
+    historyApiFallback: true,
+    /*historyApiFallback: {
+      index: 'index.html'
+    }*/
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Development',
+    }),
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+      {
+        test: /\.md$/,
+        use: 'raw-loader',
+      },
+    ],
   },
 };

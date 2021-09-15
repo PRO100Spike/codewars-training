@@ -20,7 +20,7 @@ function hexToDec(hexString) {
 }
 
 // or opt solution
-function hexToDec(hexString) {
+function hexToDec_opt(hexString) {
   //your code here
   return hexString
     .toUpperCase()
@@ -38,6 +38,6 @@ function hexToDec(hexString) {
 }
 
 // or Best Practices
-function hexToDec(hexString) {
+function hexToDec_best(hexString) {
   return  parseInt(hexString, 16);
 }

@@ -1,4 +1,4 @@
-
+/// https://www.codewars.com/kata/57a1fd2ce298a731b20006a4
 
 function isPalindrome(x) {
   // your code here
@@ -11,6 +11,6 @@ function isPalindrome(x) {
 }
 
 // best practices
-const isPalindrome = (x) => {
+const isPalindrome_best = (x) => {
   return x.split("").reverse().join("").toLowerCase() === x.toLowerCase() ? true : false
 }
