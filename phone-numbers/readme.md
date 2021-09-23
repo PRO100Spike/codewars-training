@@ -18,7 +18,7 @@ We have the following phone numbers : 0123456789 0123987654 0123987456 236549875
 This gives the following graphs :
 
 ```
-               4 - 5 - 6 - 7 - 8 - 9           
+               4 - 5 - 6 - 7 - 8 - 7           
 0 - 1 - 2 - 3 <
                 \            4 - 5 - 6
                   9 - 8 - 7 < 
