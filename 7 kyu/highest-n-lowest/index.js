@@ -1,4 +1,3 @@
-// https://www.codewars.com/kata/554b4ac871d6813a03000035/train/javascript
 function highAndLow(numbers){
   let arr = numbers.split(' ');
   let min = +arr[0], max = +arr[0]

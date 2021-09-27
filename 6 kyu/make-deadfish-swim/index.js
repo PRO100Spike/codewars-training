@@ -1,5 +1,3 @@
-// https://www.codewars.com/kata/51e0007c1f9378fa810002a9/train/javascript
-
 // Return the output array, and ignore all non-op characters
 function parse( data )
 {
