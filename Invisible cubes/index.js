@@ -2,4 +2,5 @@
 
 function notVisibleCubes(n) {
   // your code!
+  return n > 2 ? (n-2)*(n-2)*(n-2) : 0
 }
