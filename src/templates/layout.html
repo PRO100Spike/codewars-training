@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                display: flex;
+                font-family: sans-serif;
+            }
+            .sidebar {
+                width: 300px;
+                background: #f5f5f5;
+                padding: 10px;
+                height: 100vh;
+                overflow: auto;
+                border-right: 1px solid #ddd;
+            }
+            .content {
+                flex: 1;
+                padding: 20px;
+            }
+            ul {
+                list-style: none;
+                padding-left: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">${sidebar}</div>
+        <div class="content">
+            <pre>${content}</pre>
+        </div>
+    </body>
+</html>
